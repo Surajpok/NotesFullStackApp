@@ -1,14 +1,14 @@
 import axios from 'axios'
 const baseUrl = '/api/notes'
 
-const getAll = () => {
-    const request = axios.get(baseUrl)
+const getAll = async () => {
+    const response = await axios.get(baseUrl)
     // const nonExisting = {
     //     id: 10000,
     //     content: 'This note is not saved to server',
     //     important: true,
     // }
-    return request.then(response => response.data)
+    return await response.data
 
 }
 
